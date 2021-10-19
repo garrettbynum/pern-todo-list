@@ -4,15 +4,17 @@ import "./App.css";
 
 //components
 
-import InputTodo from "./components/InputTodo";
-import ListTodos from "./components/ListTodos";
+import Input from "./components/Input";
+import Table from "./components/Table";
+import Header from "./components/Header";
 
 function App() {
   return (
     <Fragment>
       <div className="container">
-        <InputTodo />
-        <ListTodos />
+        <Header title="Pern Todo List" />
+        <Input />
+        <Table />
       </div>
     </Fragment>
   );
