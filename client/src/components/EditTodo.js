@@ -2,13 +2,13 @@ import React, { Fragment, useState } from "react";
 
 const EditTodo = ({ todo }) => {
   const [description, setDescription] = useState(todo.description);
-
+  const [status, setStatus] = useState(todo.status);
   //edit description function
 
   const updateDescription = async (e) => {
     e.preventDefault();
     try {
-      const body = { description };
+      const body = { description, status };
       const response = await fetch(
         `http://localhost:5000/todos/${todo.todo_id}`,
         {
